@@ -1,0 +1,68 @@
+#block-text{
+width: fit-content;
+background-color: blue;
+}
+#block-text h5{
+   text-align: right;  
+   /* // aligns based on toronto to right */
+    }
+
+#small-headers{
+    margin-top: 10vh;
+    padding-right: 30px;
+    display: flex;              -->
+    flex-direction: column;     -->This was done to keep header aligned to the right with one above other(flex-col)
+    align-items: end;           --> Same was done for block-test
+}
+
+
+smooth-scrolling
+gsap
+scrolltrigger
+
+for locomotive->
+go to locomotive github 
+copy css part into new loco.css and link in html
+copy js part in script.js
+ copy scroll-min js cdn from web
+
+
+
+ function circleShape(){
+  var xscale=1;
+  var yscale=1;
+  var xp=0;
+  var yp=0;
+  var timeout;
+  window.addEventListener("mousemove",function(dets){
+    clearTimeout(timeout);
+    // as mouse keeps moving timeout is constantly set to zero
+    var xdiff= dets.clientX -xp
+    var ydiff =dets.clientY -yp
+    xscale =gsap.utils.clamp(.8,1.2,xdiff );
+    yscale =gsap.utils.clamp(.8,1.2, ydiff);
+    xp =dets.clientX
+      yp =dets.clientY
+      // xscale and yscale calculated lated before otherwise diff will be = to 0 later
+    
+circleMouseFollower(xscale,yscale)
+timeout = setTimeout(function(){
+  document.querySelector("#mini").style.transform=`translate(${dets.clientX}px,${dets.clientY}px )  scale(1,1)`;
+},150)
+// functions only when mouse stops
+
+  })
+
+ 
+
+}
+circleShape();
+function circleMouseFollower(xscale, yscale){
+
+  window.addEventListener("mousemove" , function(dets){
+
+document.querySelector("#mini").style.transform=`translate(${dets.clientX}px,${dets.clientY}px )  scale(${xscale},${yscale})`;
+
+
+  })}
+  
