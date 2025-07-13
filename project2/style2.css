@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#hero {
+    width: 100%;
+
+    align-items: center;
+    margin-top: 8vw;
+    padding: 3vw 10vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* same padding so that written elemnts come right below each other */
+#nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 3vw 10vw;
+    font-weight: 400;
+
+}
+
+#nleft {
+    display: flex;
+    gap: 30px;
+
+}
+
+#nav a {
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+}
+
+#nav #center {
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#sustain {
+    width: 10vw;
+
+}
+
+#sustain p {
+    text-transform: capitalize;
+    line-height: 1;
+    font-size: 10px;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+#sustain #susimg {
+    width: 100%;
+    height: 15vw;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+
+}
+
+/* have to make separate css for img  */
+#susimg img {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+}
+
+/* for zooming the image, postion is changed and overflow hidden keeps image
+in the required size of parent */
+/* top, left and transform for perfect centering */
+
+/* if we fix height in essential , it cannot inc or dec with div */
+
+#essential {
+    width: 28vw;
+    min-height: 42vw;
+
+    position: relative;
+}
+
+#imgand {
+    width: fit-content;
+    height: fit-content;
+}
+
+#essential p {
+
+    font-size: 1.5vw;
+    font-weight: 600;
+    width: 50%;
+
+    letter-spacing: -.13vw;
+
+}
+
+#essential img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#essential #headings {
+    top: -25%;
+    left: -20%;
+    position: absolute;
+}
+
+#essential h1 {
+    font-size: 6vw;
+    font-weight: 100;
+    letter-spacing: -0.5vw;
+    line-height: 1;
+
+}
+
+#visit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#circle {
+    width: 3vw;
+    align-items: center;
+    justify-content: center;
+    height: 3vw;
+
+    border-radius: 50%;
+    border: 1px solid #5e5e5e;
+    display: flex;
+}
+
+#circe i {
+    color: #5e5e5e
+}
+
+#visit h3 {
+    color: #5e5e5e;
+    font-weight: 100;
+}
+
+/* when we make p in essential , it doesn't increas the sixe of the div 
+but rather just places it below the div 
+and so when we make a new div , it will be formed just below the essential */
+
+
+#motive {
+    padding: 3vw 10vw;
+}
+
+#motive #head h2 {
+    color: #747171;
+    text-transform: uppercase;
+    font-size: 20px;
+
+}
+
+#motive p {
+    line-height: 1.5;
+    letter-spacing: -.1vw;
+    font-weight: 450;
+    padding-left: 33.3%;
+    font-size: 1.75vw;
+    text-align: right;
+  
+    align-items: center;
+    /* text and box have same center , looks symmetrical */
+}
+
+/* span must be given inline block to give height and width */
+#motive span {
+    display: inline-block;
+
+    
+
+    border-radius: 100px;
+    margin: 0 15px;
+    margin-bottom: -7px;
+}
+
+#pic1 {
+    width: 80px;
+    height: 40px;
+    ;
+    background-image: url("C:/Users/VIDUT/Downloads/shaljam.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#pictures {
+    padding: 3vw;
+    padding-left: 14vw;
+    padding-right: 12vw;
+    margin-top: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+}
+
+#firstpic {
+    width: 16vw;
+    height: 22vw;
+    margin-bottom: 1vw;
+
+}
+
+#secondpic {
+    width: 20vw;
+    height: 32vw;
+    margin-bottom: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+}
+
+#firstpic img,
+#secondpic img {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+#firstpic h1,
+#secondpic h1 {
+    font-weight: 100;
+    font-size: 2vw;
+    letter-spacing: -.1vw;
+    margin-top: 8px;
+}
+
+
+
+#firstpic p,
+#secondpic p {
+    font-size: 14px;
+    margin-top: 8px;
+    opacity: 0.8;
+    letter-spacing: -0.07vw;
+    line-height: 1;
+}
+
+
+#banners {
+    width: 100%;
+    margin-top: 8vw;
+    display: flex;
+    align-items: center;
+
+}
+
+#bimg {
+    width: 65%;
+    height: 70vh;
+    background-color: red;
+
+}
+
+#bimg img {
+    width: 100%;
+    height: 100%;
+    object-position: 0% 70%;
+    object-fit: cover;
+}
+
+#bimg h1 {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.8;
+}
+
+#btext {
+    width: 35%;
+    padding: 0 3vw;
+
+}
+
+#btext h1 {
+    font-weight: 400;
+    letter-spacing: -0.1vw;
+    line-height: 1;
+    font-size: 2.4vw;
+}
+
+#btext p {
+    margin-top: 20px;
+    width: 75%;
+    font-size: 1vw;
+}
+
+#future{
+overflow: hidden;
+position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+   
+    align-items: center;
+    justify-content: center;
+   
+}
+#future video{
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(1.2);
+
+}
+#ftext{
+    position: relative;
+    z-index: 99;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+    }
+    #ftext h1{
+        font-weight: 550;
+        font-size: 30px;
+    }
+
+    #ftext button{
+     padding: 1vw 2vw;
+     font-size: 1vw ;
+     font-weight: 600;
+     border-radius: 100px;
+     background-color: antiquewhite;
+     border: 1px solid #5d5a5a;
+     margin-top: 5px;
+}
+
+
